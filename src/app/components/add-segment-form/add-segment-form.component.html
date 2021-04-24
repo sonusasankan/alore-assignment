@@ -1,0 +1,25 @@
+<div class="add-form add-segment-form">
+    <h3 class="title">Add a segment</h3>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="input-field d-flex fd-column">
+            <label>Name*</label>
+            <input type="text" value="form.title" formControlName="title" placeholder="Ex: Computer Software" (blur)="onBlur()">
+            <span class="helper-text helper-text--error">{{formError.title}}</span>
+        </div>
+        <div class="input-field d-flex fd-column">
+            <label for="name">Icon</label>
+            <input class="icon" type="text" placeholder="Select icon" formControlName="icon" (click)="toggleEmoji()" />
+            <emoji-mart *ngIf="toggled" title="Pick your emoji…" emoji="point_up" (emojiClick)="addEmoji($event)">
+            </emoji-mart>
+            <!-- <emoji-mart (emojiClick)="addEmoji($event)"></emoji-mart> -->
+        </div>
+        <div class="input-field d-flex fd-column">
+            <label>Description</label>
+            <textarea formControlName="desc" ></textarea>
+        </div>
+        <div class="btn-group d-flex">
+            <button [disabled]="!form.valid" [ngClass]="{'btn--disabled': !form.valid}" class="btn btn--form btn--primary" type="submit">Save</button>
+            <span [mat-dialog-close]="true" class="btn btn--form btn--outline">Cancel</span>
+        </div>
+    </form>
+</div>

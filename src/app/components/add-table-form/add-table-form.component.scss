@@ -1,0 +1,27 @@
+.color-pallet {
+    max-width: 200px;
+    max-height: 200px;
+    overflow: scroll;
+    padding: 20px;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px 1px #00000008;
+    position: absolute;
+    top: 70px;
+    background-color: #fff;
+    max-height: 70px;
+    overflow: scroll;
+  .color-group {
+    list-style-type: none;
+    li{
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .color-dot {
+      width: 20px;
+      height: 20px;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+}

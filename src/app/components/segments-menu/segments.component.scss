@@ -1,0 +1,28 @@
+.segments-wrapper {
+  height: 100%;
+  .segments-menu-title {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    color: rgba(60, 60, 60, 0.7);
+    margin-bottom: 20px;
+  }
+  .segments-menu-list-item {
+    .icon {
+      margin-right: 12px;
+      min-width: 20px;
+      max-width: 20px;
+      font-size: 18px;
+    }
+    .title {
+      font-size: 14px;
+      color: #181818;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+  }
+  .btn{
+      margin-top: auto;
+  }
+}

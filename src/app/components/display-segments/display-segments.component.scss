@@ -1,0 +1,63 @@
+@import "../../../assets/variables.scss";
+
+.app-segments {
+  padding: 30px 0;
+  max-height: calc(100% - 140px);
+  overflow: scroll;
+}
+.segment-group {
+  list-style: none;
+  padding: 0;
+  margin-left: 40px;
+  .item-title { 
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+.segment-table {
+    position: relative;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 28px;
+  margin-right: 50px;
+  transition: all 0.2s ease-in-out;
+  &--add {
+    cursor: pointer;
+    &:hover {
+      border-color: $secondary-color;
+      color: $secondary-color;
+      box-shadow: 0px 6px 4px 0px rgba(51, 75, 250, 0.2);
+    }
+  }
+  .color-dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    top: 7px;
+    right: 10px;
+  }
+  .icon {
+    font-size: 26px;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+.app-segment-item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .title {
+    font-size: 26px;
+    color: $text-primary;
+    .icon {
+      margin-right: 18px;
+      min-width: 22px;
+      max-width: 22px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="app-segments">
+    <div class="app-segment-item" *ngFor="let segment of segments">
+        <h4 class="title d-flex"><span class="d-flex ai-center icon">{{ segment.icon }}</span><span>{{ segment.title
+                }}</span></h4>
+        <ul class="segment-group d-flex fw-wrap">
+            <li class="d-flex fd-column jc-center" *ngFor="let item of segment.table">
+                <div class="segment-table d-flex ai-center jc-center" [style.border-color]="item.color">
+                    <span class="color-dot" [style.background-color]="item.color"></span>
+                    <span class="icon">{{ item.icon }}</span>
+                </div>
+                <p class="item-title">{{ item.title }}</p>
+            </li>
+            <li>
+                <div (click)="openDialog(segment.id)"
+                    class="segment-table segment-table--add d-flex ai-center jc-center" #tooltip="matTooltip"
+                    matTooltipClass="tooltip" matTooltip="Add a new table" [matTooltipPosition]="'above'"
+                    matTooltipHideDelay="200" matTooltipShowDelay="200">
+                    <img src="../../../assets/images/cross.svg" alt="cross icon">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

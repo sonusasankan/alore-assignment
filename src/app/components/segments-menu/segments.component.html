@@ -1,0 +1,16 @@
+<div class="segments-wrapper d-flex fd-column">
+  <div class="segments-menu">
+    <h3 class="segments-menu-title">Segments</h3>
+    <ul class="segments-menu-list">
+      <li class="segments-menu-list-item d-flex ai-center" *ngFor="let segment of segments">
+        <span class="icon">{{ segment.icon || '🙂' }}</span>
+        <h5 class="title">{{ segment.title }}</h5>
+      </li>
+    </ul>
+  </div>
+  <button (click)="openDialog()" class="btn btn--large btn--primary btn--left-align">
+    <span class="icon"><mat-icon aria-hidden="false" aria-label="add icon">add</mat-icon>
+    </span><span>Add Segment</span>
+  </button>
+</div>
+<!-- <app-add-segment-form (addSegment)="addSegment($event)"></app-add-segment-form> -->

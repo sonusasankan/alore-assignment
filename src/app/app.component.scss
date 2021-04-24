@@ -1,0 +1,23 @@
+@import '../assets/variables.scss';
+
+.app-main{
+    min-height: 100vh;
+    max-height: 100vh;
+    .app-sidebar{
+        width: 25%;
+    }
+    .app-content{
+        width: 75%;
+        padding: 0 30px;
+        .app-topbar{
+            min-height: 70px;
+            border-bottom: 1px solid #CCCCCC;
+            .icons{
+                max-width: 150px;
+            }
+        }
+    }
+}
+app-sidebar{
+    width: 100%;
+}
